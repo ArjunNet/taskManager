@@ -64,6 +64,7 @@ nav > .navButton {
 	font-family: quicksand;
 	font-variation-settings: "wght" 475;
 	font-size: 20px;
+	cursor: pointer;
 }
 
 nav > #addTaskButton {
@@ -81,22 +82,45 @@ nav > #addTaskButton:hover {
 	color: white;
 }
 
-nav > .sizeButtons > #closeWindowButton {
+nav > .sizeButtons > * {
 	-webkit-app-region: no-drag;
+	cursor: pointer;
+}
+
+nav > .sizeButtons > #closeWindowButton {
 	position: absolute;
 	right: 1.25vw;
 	top: 50%;
+	font-size: 15px;
 	transform: translateY(-50%);
 	transition: 0.3s;
-	/* background-color: white; */
-	/* border: 2px solid red; */
-	color: red;
-	cursor: pointer;
-	max-width: 30px;
-	border-radius: 50%;
-	filter: invert(1);
+	background-color: transparent;
+	color: white;
+	border: 2px solid red;
+	padding: 2px 10px;
+	border-radius: 8px;
 }
 
 nav > .sizeButtons > #closeWindowButton:hover {
-	filter: grayscale(00%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+	color: black;
+	filter: invert(1);
+}
+
+nav > .sizeButtons > #fullscreenWindowButton {
+	position: absolute;
+	right: 10vw;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: 0.3s;
+	font-size: 15px;
+	background-color: transparent;
+	color: white;
+	border: 2px solid red;
+	padding: 2px 10px;
+	border-radius: 8px;
+}
+
+nav > .sizeButtons > #fullscreenWindowButton:hover {
+	color: black;
+	filter: invert(1);
 }

@@ -37,6 +37,16 @@ app.whenReady().then(function() {
 	ipcMain.on("close", async function() {
 		window.close()
 	})	
+
+	ipcMain.on("minimize", async function() {
+		window.minimize()
+	})
+	
+	ipcMain.on("maximize", async function() {
+		console.log(window.isMaximized())
+		if(window.isMaximized()) window.unmaximize()
+		else window.maximize()
+	})	
 })
 
 
