@@ -1,0 +1,102 @@
+@font-face {
+	font-family: montserrat;
+	src: url(../fonts/Montserrat_var_wght.ttf);
+}
+
+@font-face {
+	font-family: quicksand;
+	src: url(../fonts/Quicksand_var_wght.ttf);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#mainWindow {
+	border-radius: 12px;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(26, 31, 36);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	-webkit-app-region: drag;
+	color: whitesmoke;
+	background-color: rgb(15, 19, 24);
+	border-radius: 11px 11px 0 0;
+	min-height: calc(4vh + 4vw);
+	white-space: nowrap;
+}
+
+nav > .navElement {
+	display: inline-block;
+}
+
+nav > .navHeader {
+	font-family: montserrat;
+	font-variation-settings: "wght" 175;
+	font-variant: small-caps;
+	font-size: calc(2vh + 2vw);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%) scaleX(1.4);
+	cursor: default;
+}
+
+nav > .navHeader::selection {
+	background-color: transparent;
+}
+
+nav > .navButton {
+	-webkit-app-region: no-drag;
+	min-width: calc(4vh + 4vw);
+	background-color: transparent;
+	border-radius: 8px;
+	padding: 6px 14px;
+	font-family: quicksand;
+	font-variation-settings: "wght" 475;
+	font-size: 20px;
+}
+
+nav > #addTaskButton {
+	position: absolute;
+	left: 1.25vw;
+	top: 50%;
+	transform: translateY(-50%);
+	color: rgb(70, 97, 255);
+	border: 2px solid rgb(70, 97, 255);
+	transition: 0.3s;
+}
+
+nav > #addTaskButton:hover {
+	background-color: rgb(70, 97, 255);
+	color: white;
+}
+
+nav > .sizeButtons > #closeWindowButton {
+	-webkit-app-region: no-drag;
+	position: absolute;
+	right: 1.25vw;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: 0.3s;
+	/* background-color: white; */
+	/* border: 2px solid red; */
+	color: red;
+	cursor: pointer;
+	max-width: 30px;
+	border-radius: 50%;
+	filter: invert(1);
+}
+
+nav > .sizeButtons > #closeWindowButton:hover {
+	filter: grayscale(00%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
